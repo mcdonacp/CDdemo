@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Screenshot Background</title>
+    <title>HIFFY</title>
     <script src="https://hif.boost.ai/chatPanel/chatPanel.js"></script>
     <style>
         html, body {
@@ -16,19 +16,16 @@
         }
     </style>
 </head>
-<body>
-    <button type="button" onclick="javascript:openChat()">Open chat</button> 
+<body>    
 <script>
     var options = {
         chatPanel: {
-    settings: {
-      openTextLinksInNewTab: True,
-      },
-    },
+            settings: {
+              openTextLinksInNewTab: true,
+            },
+        },
+    };
     var boost = window.boostInit("hif", options);
-    function openChat() {
-        boost.chatPanel.show();
-    }
 </script>
 </body>
 </html>
