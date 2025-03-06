@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screenshot Background</title>
+    <script src="https://hif.boost.ai/chatPanel/chatPanel.js"></script>
     <style>
         html, body {
             height: 100%;
@@ -16,16 +17,18 @@
     </style>
 </head>
 <body>
-    <script src="https://hif.boost.ai/chatPanel/chatPanel.js"></script>
+    <button type="button" onclick="javascript:openChat()">Open chat</button> 
 <script>
-  var boost = window.boostInit("hif", {
-  chatPanel: {
+    var options = {
+        chatPanel: {
     settings: {
       openTextLinksInNewTab: True,
       },
     },
-  
-  });
+    var boost = window.boostInit("hif", options);
+    function openChat() {
+        boost.chatPanel.show();
+    }
 </script>
 </body>
 </html>
